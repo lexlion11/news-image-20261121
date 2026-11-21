@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1024px; height:1024px; overflow:hidden; }
+  body {
+    font-family: Georgia, 'DejaVu Serif', 'Times New Roman', serif;
+    background:#f6f2e9; color:#141414;
+    padding:20px 26px 14px 26px;
+    display:flex; flex-direction:column;
+  }
+  .rule { height:5px; background:#141414; }
+  .rule.thin { height:2px; }
+  .rule.red { background:#b01e23; }
+
+  /* Masthead */
+  .masthead { text-align:center; padding:6px 0 8px 0; }
+  .masthead .title {
+    font-size:48px; font-weight:bold; letter-spacing:6px; line-height:1.05;
+    font-family: Georgia, 'DejaVu Serif', serif;
+  }
+  .masthead .date {
+    font-size:48px; font-weight:bold; color:#b01e23; letter-spacing:2px;
+    margin-top:4px; font-family: Georgia, 'DejaVu Serif', serif;
+  }
+  .masthead .tag {
+    font-size:17px; color:#555; letter-spacing:3px; margin-top:3px;
+    font-family:'DejaVu Sans', Arial, sans-serif; text-transform:uppercase;
+  }
+
+  /* Hero */
+  .hero {
+    display:flex; margin-top:12px; padding:14px 18px 12px 18px;
+    background:#fffdf6; border:2px solid #141414;
+    align-items:center; gap:20px;
+  }
+  .hero .left { flex:1.15; }
+  .kicker {
+    font-family:'DejaVu Sans', Arial, sans-serif;
+    font-size:18px; font-weight:bold; color:#b01e23; letter-spacing:3px;
+    text-transform:uppercase; margin-bottom:6px;
+  }
+  .hero h1 { font-size:40px; line-height:1.08; font-weight:bold; }
+  .hero .sub { font-size:21px; color:#333; margin-top:8px; line-height:1.28; }
+  .hero .right { flex:1; text-align:center; }
+  .hero .right .big {
+    font-size:56px; font-weight:bold; color:#b01e23; line-height:1;
+    font-family:'DejaVu Sans', Arial, sans-serif;
+  }
+  .hero .right .lbl {
+    font-size:21px; color:#333; font-family:'DejaVu Sans', Arial, sans-serif;
+    margin-top:5px; letter-spacing:1px;
+  }
+  .hero .right .nvda {
+    font-size:24px; font-weight:bold; color:#141414;
+    font-family:'DejaVu Sans', Arial, sans-serif; margin-top:10px;
+  }
+  svg { display:block; margin:8px auto 0 auto; }
+
+  /* Grid */
+  .grid {
+    flex:1; display:grid; grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr; gap:12px; margin-top:14px;
+    min-height:0;
+  }
+  .card {
+    background:#fffdf6; border:2px solid #141414; padding:12px 14px 10px 14px;
+    display:flex; flex-direction:column; min-height:0; overflow:hidden;
+  }
+  .card .emoji { font-size:44px; line-height:1; margin-bottom:5px; }
+  .card h2 { font-size:28px; line-height:1.1; font-weight:bold; }
+  .card .sub { font-size:18px; color:#444; margin-top:6px; line-height:1.24; }
+
+  /* Footer */
+  .foot {
+    margin-top:12px; background:#141414; color:#f6f2e9;
+    text-align:center; padding:8px 0; font-size:20px; letter-spacing:3px;
+    font-family:'DejaVu Sans', Arial, sans-serif; font-weight:bold;
+  }
+</style>
+</head>
+<body>
+  <div class="rule"></div>
+  <div class="masthead">
+    <div class="title">THE WORLD DAILY</div>
+    <div class="date">SATURDAY · 21 NOVEMBER 2026</div>
+    <div class="tag">The day's world news in one page</div>
+  </div>
+  <div class="rule red"></div>
+
+  <div class="hero">
+    <div class="left">
+      <div class="kicker">Markets · United States</div>
+      <h1>AI rout: Nasdaq plunges 5.3%</h1>
+      <div class="sub">Nvidia sinks 14% as the SEC probes its accounting &mdash; all three Wall Street indexes enter correction territory.</div>
+    </div>
+    <div class="right">
+      <svg width="280" height="96" viewBox="0 0 300 120">
+        <polyline points="10,20 60,28 110,24 160,52 210,70 260,96 290,110"
+                  fill="none" stroke="#b01e23" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <polygon points="290,110 272,104 282,122" fill="#b01e23"/>
+        <line x1="10" y1="118" x2="290" y2="118" stroke="#141414" stroke-width="2"/>
+      </svg>
+      <div class="big">&minus;5.3%</div>
+      <div class="lbl">NASDAQ &middot; NVDA &minus;14%</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="emoji">⚓</div>
+      <div class="kicker">Middle East</div>
+      <h2>Tankers struck leaving Hormuz</h2>
+      <div class="sub">Two oil tankers hit by projectiles; Iran says it still seeks diplomacy.</div>
+    </div>
+    <div class="card">
+      <div class="emoji">🕊️</div>
+      <div class="kicker">Diplomacy</div>
+      <h2>Xi&ndash;Putin&ndash;Trump Shenzhen summit</h2>
+      <div class="sub">APEC leaders issue first tripartite peace declaration.</div>
+    </div>
+    <div class="card">
+      <div class="emoji">🚀</div>
+      <div class="kicker">Space</div>
+      <h2>Voyager 1: one light-day out</h2>
+      <div class="sub">Farthest human-made object &mdash; signals now take 24 hours home.</div>
+    </div>
+    <div class="card">
+      <div class="emoji">🇯🇵</div>
+      <div class="kicker">Japan</div>
+      <h2>47,000 reject nuclear submarines</h2>
+      <div class="sub">Petition demands Tokyo scrap its nuclear-powered sub plan.</div>
+    </div>
+    <div class="card">
+      <div class="emoji">💥</div>
+      <div class="kicker">Yemen</div>
+      <h2>Saudi&ndash;Houthi strikes escalate</h2>
+      <div class="sub">41 killed in Yemen raids; missiles on Riyadh intercepted.</div>
+    </div>
+    <div class="card">
+      <div class="emoji">⚽</div>
+      <div class="kicker">Football</div>
+      <h2>FIFA race becomes three-way</h2>
+      <div class="sub">Infantino challenged by Tashima of Japan and Diallo of France.</div>
+    </div>
+  </div>
+
+  <div class="foot">WORLD NEWS &middot; SATURDAY 21 NOVEMBER 2026</div>
+</body>
+</html>
